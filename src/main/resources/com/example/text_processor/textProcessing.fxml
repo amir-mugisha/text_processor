@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<Pane prefHeight="432.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.text_processor.TextProcessingController">
+        <children>
+            <TextField fx:id="textTextField" layoutX="38.0" layoutY="89.0" prefHeight="35.0" prefWidth="395.0" promptText="Text" />
+            <Label layoutX="38.0" layoutY="55.0" prefHeight="31.0" prefWidth="121.0" text="Enter text:">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+            <TextField fx:id="regexTextField" layoutX="39.0" layoutY="172.0" prefHeight="35.0" prefWidth="189.0" promptText="pattern" />
+            <Label layoutX="39.0" layoutY="138.0" prefHeight="31.0" prefWidth="121.0" text="Regex pattern">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+            <TextField fx:id="repTextField" layoutX="234.0" layoutY="172.0" prefHeight="35.0" prefWidth="199.0" promptText="replacement" />
+            <Label layoutX="234.0" layoutY="138.0" prefHeight="31.0" prefWidth="121.0" text="Replace with">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+            <Button layoutX="39.0" layoutY="265.0" mnemonicParsing="false" onAction="#findMatch" prefHeight="32.0" prefWidth="113.0" style="-fx-background-color: #2c3e50; -fx-cursor: hand;" text="Find matches" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="160.0" layoutY="265.0" mnemonicParsing="false" onAction="#replaceMatch" prefHeight="33.0" prefWidth="111.0" style="-fx-background-color: #2c3e50; -fx-cursor: hand;" text="Replace" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="286.0" layoutY="265.0" mnemonicParsing="false" onAction="#highlightMatch" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #2c3e50; -fx-cursor: hand;" text="Highlight matches" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Label layoutX="38.0" layoutY="323.0" prefHeight="26.0" prefWidth="80.0" text="Results:">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Label>
+      <Label fx:id="warningLabel" alignment="CENTER" layoutX="45.0" layoutY="224.0" prefHeight="26.0" prefWidth="395.0" styleClass="warning" textFill="#e42d2d">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultLabel" alignment="BASELINE_LEFT" layoutX="37.0" layoutY="356.0" prefHeight="41.0" prefWidth="409.0" styleClass="warning" textFill="#168038">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextFlow fx:id="highlightResultTextFlow" layoutX="34.0" layoutY="356.0" prefHeight="41.0" prefWidth="409.0" />
+        </children>
+
+</Pane>

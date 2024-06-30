@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.text_processor.HomeController">
+   <left>
+      <VBox prefHeight="500.0" prefWidth="192.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="59.0" prefWidth="212.0" text=" Text Processor" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="textManipulationButton" mnemonicParsing="false" onAction="#switchToTextManipulation" prefHeight="44.0" prefWidth="197.0" style="-fx-background-color: #2c3e50; -fx-cursor: hand;" text="Text manipulation" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="dataCollectionsButton" mnemonicParsing="false" onAction="#switchToDataCollections" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #2c3e50; -fx-cursor: hand;" text="Data collections" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="content" layoutX="4.0" layoutY="1.0" prefHeight="470.0" prefWidth="496.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

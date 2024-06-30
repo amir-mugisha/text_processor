@@ -1,0 +1,12 @@
+.button:hover {
+    -fx-background-color: #10457a !important;
+}
+
+.button.warning:hover {
+        -fx-background-color: #fa5246 !important;
+}
+
+.choice-box-popup .list-cell {
+    -fx-pref-width: 100% !important;
+    -fx-background-color: #f0f0f0 !important;
+}
