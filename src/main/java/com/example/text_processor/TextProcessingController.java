@@ -35,6 +35,7 @@ public class TextProcessingController {
         try{
             TextField[] fields = {textTextField, regexTextField};
             this.validateTextFields(fields);
+            //Clear possible previous results
             warningLabel.setText("");
             highlightResultTextFlow.getChildren().clear();
             Pattern pattern = Pattern.compile(regexTextField.getText(), Pattern.CASE_INSENSITIVE);
@@ -87,12 +88,12 @@ public class TextProcessingController {
                     highlightResultTextFlow.getChildren().add(preMatchText);
                 }
 
-                // Add the matched text with highlighting and font size
+                // Add the matched text with highlighting
                 Text highlightedText = new Text(matcher.group());
                 highlightedText.setStyle("-fx-fill: red; -fx-font-size: 20px; -fx-font-weight:bold"); // change color and font size as needed
                 highlightResultTextFlow.getChildren().add(highlightedText);
 
-                lastMatchEnd = matcher.end();
+                lastMatchEnd = matcher.end( );
             }
 
             // Add remaining text after the last match

@@ -62,9 +62,11 @@ public class DataCollectionsController implements Initializable {
 
     public void addItem(ActionEvent event){
         TextField[] fields = {itemTextField};
+        // check for required fields to add data into our collection
         if(!this.validateFields(fields)){
             return;
         };
+        //clear possible previous results
         warningLabel.setText("");
         resultLabel.setText("");
         if(dataCollection.type == DataCollection.CollectionType.MAP) {
@@ -94,6 +96,7 @@ public class DataCollectionsController implements Initializable {
             displayData();
         }else{
             int indexInteger = Integer.parseInt(indexTextField.getText());
+            //check if the index is within the bounds of the collection
             if(indexInteger < 0 || indexInteger >= dataCollection.size()){
                 resultLabel.setText("");
                 warningLabel.setText("Index out of bounds");
